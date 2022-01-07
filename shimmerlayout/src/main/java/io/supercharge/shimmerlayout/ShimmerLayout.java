@@ -104,11 +104,15 @@ public class ShimmerLayout extends FrameLayout {
 
     @Override
     protected void dispatchDraw(Canvas canvas) {
+        try {
         if (!isAnimationStarted || getWidth() <= 0 || getHeight() <= 0) {
             super.dispatchDraw(canvas);
         } else {
             dispatchDrawShimmer(canvas);
         }
+       }catch (Exception e){
+
+       }
     }
 
     @Override
